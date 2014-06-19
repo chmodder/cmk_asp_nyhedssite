@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_Frontend.master.cs" Inherits="MasterPage_Frontend" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Dynamisk Webproduktion Nyhedssite</title>
+    <!-- http://www.bootstrapcdn.com/ -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/css/frontend.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container wrapper">
+            <header>
+                <h1>Dynamisk Webproduktion Nyhedssite</h1>
+            </header>
+
+            <nav class="top">
+                <asp:Menu ID="Menu_Frontend" runat="server" EnableViewState="false"
+                    Orientation="Horizontal" StaticMenuStyle-CssClass="nav nav-pills" StaticSelectedStyle-CssClass="active">
+                </asp:Menu>
+            </nav>
+
+            <section>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <footer>
+                <p>
+                    CMK News 2005 - <% Response.Write(DateTime.Now.Year.ToString()); %>
+                </p>
+            </footer>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            // MenuControl clientside fixes
+            $(function () {
+                // to fix collapse mode width issue
+                $(".nav li,.nav li a,.nav li ul").removeAttr('style');
+
+                // set li to active, instead of anchor to selected
+                $(".nav li a.selected").parent().addClass("active");
+                $(".nav li a.selected").removeClass("selected");
+
+                // for dropdown menu
+                $(".dropdown-menu").parent().removeClass().addClass('dropdown');
+                $(".dropdown>a").removeClass().addClass('dropdown-toggle').append('<b class="caret"></b>').attr('data-toggle', 'dropdown');
+
+                // remove default click redirect effect          
+                $('.dropdown-toggle').attr('onclick', '').off('click');
+            });
+        </script>
+    </form>
+</body>
+</html>

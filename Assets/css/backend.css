@@ -1,0 +1,29 @@
+/* Behold scrollbar i højre side, så siden ikke hopper */
+html
+{
+    overflow-y: scroll;
+}
+
+.well, .well pre
+{
+    background: #555555;
+    color: #ffffff;
+}
+.well
+{
+    margin-top: 50px;
+}
+
+div.container > section
+{
+    min-height: 300px;
+}
+
+
+footer p
+{
+    border-top: solid 1px #444444;
+    border-bottom: solid 1px #444444;
+    padding: 20px 0px;
+    text-align: center;
+}

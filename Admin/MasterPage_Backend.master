@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_Backend.master.cs" Inherits="Admin_MasterPage_Backend" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Dynamisk Webproduktion</title>
+    <!-- http://www.bootstrapcdn.com/ -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css" rel="stylesheet" />
+    <!-- Særlige styles der overskriver Bootstrap -->
+    <link href="../Assets/css/backend.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+
+            <header>
+                <h1 class="well">Dynamisk Webproduktion Administration</h1>
+            </header>
+
+            <div class="row">
+                <nav class="col-lg-3 ">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <h2>Administration</h2>
+                        </li>
+                        <% Response.Write(MenuItem("Default.aspx", "Admin")); %>
+                        <% Response.Write(MenuItem("Users.aspx", "Brugere")); %>
+                        <% Response.Write(MenuItem("Categories.aspx", "Kategorier")); %>
+                        <% Response.Write(MenuItem("Editors.aspx", "Redaktører")); %>
+                        <% Response.Write(MenuItem("../Login.aspx?action=logout", "Log af <i class=\"icon-unlock\"></i>", "return confirm(\'Er du sikker på du vil logge af?\')")); %>
+                        <% Response.Write(MenuItem("../Default.aspx", "Vis Frontend <i class=\"icon-share-alt\"></i>")); %>
+                    </ul>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <h2>Nyheds Kategori</h2>
+                        </li>
+                        <% Response.Write(BuildEditorNavigation()); %>
+                    </ul>
+                    <br />
+
+                </nav>
+
+                <section class="col-lg-9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:Panel ID="Panel_Message" Visible="false" runat="server">
+                        <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <p>
+                                <asp:Label ID="Label_Message" runat="server" Text=""></asp:Label>
+                            </p>
+                        </div>
+                    </asp:Panel>
+
+                </section>
+            </div>
+
+            <footer>
+                <p>
+                    CMK News 2005 - <% Response.Write(DateTime.Now.Year.ToString()); %>
+                </p>
+            </footer>
+
+        </div>
+    </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
