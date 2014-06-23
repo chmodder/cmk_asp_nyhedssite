@@ -11,11 +11,24 @@ public partial class Admin_News : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        string UrlCatId = Request.QueryString["category_id"];
+
+        bool RoleUser = RoleIsUser();
+        bool RoleNull = RoleIsNull();
+        bool CIdNoAccess = CatIdNoAccess(UrlCatId);
+
         // man skal have administrations rettigheder for at være på denne side
-        if (Session["role_access"] == null || Convert.ToInt32(Session["role_access"]) < 10)
+        if (RoleNull || RoleUser || (CIdNoAccess && (int)Session["role_access"] < 100))
         {
-            //Response.Redirect("../Login.aspx");
+            Response.Redirect("../Login.aspx");
         }
+
+        //old code
+        //// man skal have administrations rettigheder for at være på denne side
+        //if (Session["role_access"] == null || Convert.ToInt32(Session["role_access"]) < 10 || Helpers.Test(UrlCatId) != true)
+        //{
+        //    Response.Redirect("../Login.aspx");
+        //}
 
         // præsenter den ønskede del af kategori administrationen, baseret på action i URL
         switch (Request.QueryString["action"])
@@ -54,6 +67,36 @@ public partial class Admin_News : System.Web.UI.Page
                 }
                 break;
         }
+    }
+
+    private bool CatIdNoAccess(string urlCatId)
+    {
+        bool CIdNoAccess = true;
+        if (Helpers.Test(Convert.ToInt32(urlCatId)) == true)
+        {
+            CIdNoAccess = false;
+        }
+        return CIdNoAccess;
+    }
+
+    private bool RoleIsNull()
+    {
+        bool SessionNull = true;
+        if (Session["role_access"] != null)
+        {
+            SessionNull = false;
+        }
+        return SessionNull;
+    }
+
+    private bool RoleIsUser()
+    {
+        bool RoleIsUser = true;
+        if (!(Convert.ToInt32(Session["role_access"]) < 10))
+        {
+            RoleIsUser = false;
+        }
+        return RoleIsUser;
     }
 
     private void GetCategories()

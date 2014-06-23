@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -20,6 +23,11 @@ public partial class Login : System.Web.UI.Page
     }
     protected void Button_Login_Click(object sender, EventArgs e)
     {
+        //admin password 1234
+        string UserEmail = TextBox_Email.Text;
+        string UserPassWord = TextBox_Password.Text;
+        
+
         SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
@@ -33,7 +41,7 @@ public partial class Login : System.Web.UI.Page
             AND 
                 user_password = @user_password";
         cmd.Parameters.Add("@user_email", SqlDbType.VarChar, 32).Value = TextBox_Email.Text;
-        cmd.Parameters.Add("@user_password", SqlDbType.VarChar, 200).Value = TextBox_Password.Text;
+        cmd.Parameters.Add("@user_password", SqlDbType.VarChar, 200).Value = Helpers.HashNSalt(UserEmail, UserPassWord);
         
         conn.Open();
         SqlDataReader reader = cmd.ExecuteReader();
@@ -43,6 +51,8 @@ public partial class Login : System.Web.UI.Page
             Session["user_name"] = reader["user_name"];
             Session["user_email"] = reader["user_email"];
             Session["role_access"] = reader["role_access"];
+            conn.Close();
+            Helpers.EditorCatList();
             Response.Redirect("Default.aspx");
         }
         else
@@ -52,4 +62,5 @@ public partial class Login : System.Web.UI.Page
         }
         conn.Close();
     }
+
 }

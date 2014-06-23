@@ -153,12 +153,13 @@ public partial class Admin_Users : System.Web.UI.Page
                         throw new FormatException("Udfyld Brugernavn");
                     }
                     cmd.CommandText = "INSERT INTO users (user_name, user_email, user_password, fk_roles_id) VALUES (@user_name, @user_email, @user_password, @role_id)";
-                    cmd.Parameters.Add("@user_password", SqlDbType.VarChar, 32).Value = TextBox_Password.Text;
+                    cmd.Parameters.Add("@user_password", SqlDbType.VarChar, 32).Value = Helpers.HashNSalt(TextBox_Email.Text, TextBox_Password.Text);
                     break;
 
                 case "edit":
-                    cmd.CommandText = "UPDATE users SET user_name = @user_name, user_email = @user_email, fk_roles_id = @role_id WHERE user_id = @id";
+                    cmd.CommandText = "UPDATE users SET user_name = @user_name, user_email = @user_email, fk_roles_id = @role_id, user_password = @user_password WHERE user_id = @id";
                     cmd.Parameters.Add("@id", SqlDbType.Int).Value = Request.QueryString["user_id"];
+                    cmd.Parameters.Add("@user_password", SqlDbType.VarChar, 32).Value = Helpers.HashNSalt(TextBox_Email.Text, TextBox_Password.Text);
                     break;
             }
 

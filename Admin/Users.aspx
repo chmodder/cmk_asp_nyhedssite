@@ -67,7 +67,7 @@
             <div class="form-group">
                 <label for="TextBox_Role">Rolle</label>
                 <asp:DropDownList ID="DropDownList_Role" runat="server" CssClass="form-control"></asp:DropDownList>
-                <asp:RangeValidator ID="RangeValidator_Role" runat="server" ErrorMessage="<p class='alert alert-danger'>Vælg en rolle</p>" ControlToValidate="DropDownList_Role" MinimumValue="1" MaximumValue="100"></asp:RangeValidator>
+                <asp:RangeValidator ID="RangeValidator_Role" runat="server" ErrorMessage="<p class='alert alert-danger'>Vælg en rolle</p>" ControlToValidate="DropDownList_Role" MinimumValue="1" MaximumValue="100" Type="Integer"></asp:RangeValidator>
             </div>
             <asp:Button ID="Button_Save" runat="server" CssClass="btn btn-success" Text="Gem" OnClick="Button_Save_Click" />
             <a href="Users.aspx" class="btn btn-default" onclick="return confirm('Er du sikker på du vil annullere?')">Annuller</a>

@@ -11,6 +11,7 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
         if (Session["message"] != null)
         {
             Panel_Message.Visible = true;
@@ -38,6 +39,9 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
     }
     public string BuildEditorNavigation()
     {
+
+        string MenuItems = "";
+
         SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
         SqlCommand cmd = new SqlCommand(@"SELECT category_title, category_id FROM categories ORDER BY category_title ASC", conn);
 
@@ -46,16 +50,23 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
         {
             category_id = Request.QueryString["category_id"].ToString();
         }
+
         conn.Open();
-        string MenuItems = "";
         SqlDataReader reader = cmd.ExecuteReader();
         while (reader.Read())
         {
+
             string active = (Request.RawUrl.Contains("News.aspx") && category_id == reader["category_id"].ToString() ? " class='active'" : "");
-            MenuItems += String.Format("<li{2}><a href='{0}'>{1}</a></li>", "News.aspx?category_id=" + reader["category_id"], reader["category_title"], active);
+
+            if (Helpers.EditorForThisCat(reader["category_id"]) || (int)Session["role_access"] == 100)
+            {
+                MenuItems += String.Format("<li{2}><a href='{0}'>{1}</a></li>", "News.aspx?category_id=" + reader["category_id"], reader["category_title"], active);
+
+            }
 
         }
         conn.Close();
+
         return MenuItems;
     }
 }
