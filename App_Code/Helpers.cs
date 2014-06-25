@@ -95,4 +95,14 @@ public class Helpers
         Conn.Close();
         HttpContext.Current.Session["cat_id"] = CatIdList;
     }
+
+    /// <summary>
+    /// CKEditor htmldecoder.
+    /// </summary>
+    /// <param name="text"></param>
+    /// <returns></returns>
+    public static string ReverseHtmlEncoding(string text)
+    {
+        return text.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&amp;", "&");
+    }
 }

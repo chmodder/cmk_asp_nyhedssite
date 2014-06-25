@@ -56,7 +56,7 @@
             </div>
             <div class="form-group">
                 <label for="TextBox_Description">Nyheds Tekst</label>
-                <asp:TextBox ID="TextBox_Content" runat="server" placeholder="Nyheds Tekst" CssClass="form-control" TextMode="MultiLine" Rows="10"></asp:TextBox>
+                <asp:TextBox ID="editor1" runat="server" placeholder="Nyheds Tekst" CssClass="ckeditor form-control" ClientIDMode="Static" TextMode="MultiLine" Rows="10"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="DropDownList_Category">Kategori</label>

@@ -36,37 +36,66 @@ public partial class Categories : System.Web.UI.Page
         BuildBreadCrumbs();
     }
 
+    #region Pager
+
+
+
     private void GetCategoryNews(int category_id)
     {
-        SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
-        SqlCommand cmd = new SqlCommand();
-        cmd.Connection = conn;
-        cmd.CommandText = @"
-            SELECT 
-                news_id
-                , news_title
-                , news_content
-                , news_postdate
-                , user_name
-                , category_id
-            FROM news
-            INNER JOIN 
-                categories ON category_id = news.fk_categories_id
-            INNER JOIN 
-                users ON user_id = news.fk_users_id 
-            WHERE 
-                news.fk_categories_id = @category_id
-            ORDER BY 
-                news_postdate DESC
-            OFFSET 0 ROWS
-            FETCH NEXT 5 ROWS ONLY";
+        Pagination PageHandler = new Pagination(category_id, "SELECT COUNT(news_id) AS antal FROM news WHERE fk_categories_id = @category_id");
 
-        cmd.Parameters.Add("@category_id", SqlDbType.Int).Value = category_id;
-        conn.Open();
-        Repeater_Category.DataSource = cmd.ExecuteReader();
+        PageHandler.NewsPerPage = 5;
+        PageHandler.UpdateCurrentPageNo();
+
+        //bind rowlist to repeater
+        Repeater_Category.DataSource = PageHandler.GetRows(@"
+                        SELECT news_id, news_title, news_content, news_postdate, user_name, category_id
+                        FROM news
+                        INNER JOIN categories ON category_id = fk_categories_id
+                        INNER JOIN users ON user_id = fk_users_id
+                        WHERE fk_categories_id = @category_id
+                        ORDER BY news_postdate DESC
+                        OFFSET @offset ROWS
+                        FETCH NEXT @news_per_page ROWS ONLY");
         Repeater_Category.DataBind();
-        conn.Close();
+
+
+        PageHandler.SetPagerNav(PagerLtl);
+
+        #region Old SQL
+        //        SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = conn;
+        //        cmd.CommandText = @"
+        //            SELECT 
+        //                news_id
+        //                , news_title
+        //                , news_content
+        //                , news_postdate
+        //                , user_name
+        //                , category_id
+        //            FROM news
+        //            INNER JOIN 
+        //                categories ON category_id = news.fk_categories_id
+        //            INNER JOIN 
+        //                users ON user_id = news.fk_users_id 
+        //            WHERE 
+        //                news.fk_categories_id = @category_id
+        //            ORDER BY 
+        //                news_postdate DESC
+        //            OFFSET 0 ROWS
+        //            FETCH NEXT 5 ROWS ONLY";
+
+        //        cmd.Parameters.Add("@category_id", SqlDbType.Int).Value = category_id;
+        //        conn.Open();
+        //        Repeater_Category.DataSource = cmd.ExecuteReader();
+        //        Repeater_Category.DataBind();
+        //        conn.Close();
+        #endregion
     }
+
+
+    #endregion
 
     private void BuildBreadCrumbs()
     {

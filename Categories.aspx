@@ -14,6 +14,8 @@
             </section>
         </ItemTemplate>
     </asp:Repeater>
+    
+    <asp:Literal ID="PagerLtl" runat="server"></asp:Literal>
 
     <div class="bottom">
         <ul class="breadcrumb">

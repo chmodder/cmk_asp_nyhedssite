@@ -174,7 +174,7 @@ public partial class Admin_News : System.Web.UI.Page
                 if (reader.Read())
                 {
                     TextBox_Title.Text = reader["news_title"].ToString();
-                    TextBox_Content.Text = reader["news_content"].ToString();
+                    editor1.Text = reader["news_content"].ToString();
                     DropDownList_Category.SelectedValue = reader["fk_categories_id"].ToString();
                 }
                 conn.Close();
@@ -210,7 +210,8 @@ public partial class Admin_News : System.Web.UI.Page
             }
 
             cmd.Parameters.Add("@news_title", SqlDbType.VarChar, 32).Value = TextBox_Title.Text;
-            cmd.Parameters.Add("@news_content", SqlDbType.Text).Value = TextBox_Content.Text;
+            cmd.Parameters.Add("@news_content", SqlDbType.Text).Value = Helpers.ReverseHtmlEncoding(editor1.Text);
+            //cmd.Parameters.Add("@news_content", SqlDbType.Text).Value = editor1.Text;
 
             conn.Open();
             cmd.ExecuteNonQuery();
