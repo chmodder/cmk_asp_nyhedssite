@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,7 @@ public partial class Categories : System.Web.UI.Page
             {
                 // hvis vi har en category_id af typen INT i URL, så henter vi kategoriens nyheder
                 GetCategoryNews(category_id);
+                CreateRssLink(category_id);
             }
             else
             {
@@ -34,6 +36,69 @@ public partial class Categories : System.Web.UI.Page
             }
         }
         BuildBreadCrumbs();
+    }
+
+    //Add this Method to Rss class (CreateLinkToExistingFeed)
+    private void CreateRssLink(int CatId)
+    {
+        string CatTitle = GetCatTitle(CatId);
+
+
+        foreach (var files in Directory.GetFiles(Server.MapPath("~/Assets/Rss/")))
+        {
+            //Gets complete serverpath and filename including extentions (unused)
+            FileInfo info = new FileInfo(files);
+
+            //Get filename incl. extention (no path or directory)
+            var fileName = Path.GetFileName(info.FullName);
+
+            //Get filename excl. extention (no path or directory)
+            var fileNameNoExt = Path.GetFileNameWithoutExtension(info.FullName);
+
+            if (fileNameNoExt == CatTitle)
+            {
+                CatLtl.Text = "<a href='Assets/Rss/" + fileName + "'><span class='label label-info'>" + "RSS: " + fileNameNoExt + "</span></a>";
+            }
+
+            #region Test
+
+
+            //string RssLink = "";
+
+            //if (fileNameNoExt != CatTitle)
+            //{
+            //    Feeds.CreateCatXml(CatId);
+            //    RssLink = "<a href='Assets/Rss/" + fileName + "'><span class='label label-info'>" + "RSS: " + fileNameNoExt + "</span></a>";
+
+            //    if (fileNameNoExt == CatTitle)
+            //    {
+            //        CatLtl.Text = RssLink;
+            //    }
+            //}
+            #endregion
+        }
+
+    }
+
+    //Add to Helper or Rss class to assist the method above (CreateRssLink)
+    private string GetCatTitle(int CatId)
+    {
+        SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
+        SqlCommand cmd = new SqlCommand();
+        cmd.Connection = conn;
+        cmd.CommandText = @"
+                        SELECT 
+                            category_title
+                        FROM categories
+                           WHERE categories.category_id = @category_id
+                        ";
+
+        cmd.Parameters.Add("@category_id", SqlDbType.Int).Value = CatId;
+        conn.Open();
+        string CatTitle = (string)cmd.ExecuteScalar();
+        conn.Close();
+
+        return CatTitle;
     }
 
     #region Pager

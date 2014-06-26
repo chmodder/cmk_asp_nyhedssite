@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sport</title>
+    <link>http://localhost:58302/cmk_asp_nyhedssite/Categories.aspx?category_id=2</link>
+    <description>Her kommer alle sports nyhederne</description>
+    <pubDate>Last updated 26-06-2014 04:16:08</pubDate>
+    <item>
+      <title>Prøver lige igen - sport</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=54]]></link>
+      <description><![CDATA[<p>S&aring; pr&oslash;ver jeg lige igen&nbsp;&reg;<img alt="angry" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/angry_smile.png" style="height:23px; width:23px" title="angry" /></p>
+
+<hr />
+<p>&nbsp;</p>
+]]></description>
+      <pubDate>26-06-2014 02:52:27</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Ny sportsnyhed - æøå</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=53]]></link>
+      <description><![CDATA[<p>&aelig;&aring;&oslash;&nbsp;<img alt="yes" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/thumbs_up.png" style="height:23px; width:23px" title="yes" /></p>
+]]></description>
+      <pubDate>26-06-2014 02:41:04</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Sportsnyhed---øåæ</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=52]]></link>
+      <description><![CDATA[<p>&oslash;&aring;&aelig;&nbsp;<img alt="mail" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/envelope.png" style="height:23px; width:23px" title="mail" /></p>
+]]></description>
+      <pubDate>26-06-2014 02:38:56</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Nam elit dui</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=22]]></link>
+      <description><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam elit dui, laoreet quis blandit id, interdum nec diam. Aliquam commodo vehicula ultrices. Quisque ac turpis erat. Nullam iaculis, elit elementum ornare hendrerit, ipsum risus lobortis dui, ut pharetra ipsum lacus a libero. Quisque vehicula lectus lorem, at consectetur neque semper nec. Maecenas aliquet adipiscing velit eu ullamcorper. Fusce facilisis risus ac turpis dictum, vel aliquam risus porttitor. Pellentesque libero arcu, posuere quis condimentum ac, blandit vel tortor. Nulla facilisi. Nullam tincidunt neque magna, at malesuada erat rhoncus at.]]></description>
+      <pubDate>16-07-2013 10:50:15</pubDate>
+      <author>Dan Donaldson</author>
+    </item>
+    <item>
+      <title>Aenean aliquam tincidunt</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=20]]></link>
+      <description><![CDATA[Etiam egestas risus eleifend sodales iaculis. Aenean sollicitudin nunc eget urna molestie euismod. Aenean aliquam tincidunt tempor. Vivamus imperdiet feugiat nisi, a posuere eros viverra eget. Ut sodales, velit lacinia varius cursus, arcu enim ullamcorper est, nec ultrices orci dolor at neque. Nullam tempus ullamcorper eleifend. Suspendisse tincidunt vestibulum urna, adipiscing commodo arcu auctor at. Cras euismod rhoncus lorem ac euismod.]]></description>
+      <pubDate>22-06-2013 08:35:45</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Integer sagittis</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=18]]></link>
+      <description><![CDATA[Integer sagittis, erat at faucibus placerat, massa nunc euismod ante, nec vehicula elit nisi sed diam. Morbi quis erat arcu. Nunc aliquet mi a blandit tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vehicula consequat metus et scelerisque. Vivamus congue, ligula venenatis laoreet bibendum, magna tellus cursus enim, nec eleifend dolor risus in mi. Aliquam mattis enim eget tellus pretium feugiat. Maecenas dapibus nulla nec urna commodo tristique. Praesent semper consectetur sapien eu scelerisque. Nam auctor dictum dolor eget ultricies.]]></description>
+      <pubDate>04-06-2013 04:11:44</pubDate>
+      <author>Egon Erikson</author>
+    </item>
+    <item>
+      <title>Phasellus tincidunt metus</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=17]]></link>
+      <description><![CDATA[Pellentesque ornare sem non convallis sagittis. Duis auctor eget augue ac vulputate. Phasellus tincidunt metus quis elit molestie, et varius enim varius. In ut commodo nisl. Praesent semper mi sed consectetur sagittis. Pellentesque vehicula quis erat quis sollicitudin. Ut luctus libero sed sodales blandit. Suspendisse id interdum sem, id sagittis nunc. Suspendisse porttitor aliquet justo, sollicitudin ultricies enim dapibus sed. Morbi ut lorem interdum, tempus eros eu, congue dolor. Nulla et euismod lacus. Vestibulum a mollis ante. Etiam accumsan tempor nibh nec tincidunt.]]></description>
+      <pubDate>25-05-2013 14:23:57</pubDate>
+      <author>Carl Carstensen </author>
+    </item>
+    <item>
+      <title>Duis faucibus quam</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=16]]></link>
+      <description><![CDATA[Vestibulum vestibulum orci dui, non pulvinar neque imperdiet quis. Duis faucibus quam metus. Integer libero sem, ultrices nec molestie eu, eleifend et quam. Nulla aliquet ligula turpis, vitae rhoncus ligula scelerisque quis. Morbi eget adipiscing tortor. Donec nec lorem non lorem consectetur commodo non et metus. Pellentesque commodo arcu ut est mollis auctor.]]></description>
+      <pubDate>14-05-2013 03:23:52</pubDate>
+      <author>Finn Fransen</author>
+    </item>
+    <item>
+      <title>Quisque at orci sed</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=14]]></link>
+      <description><![CDATA[Quisque at orci sed nulla congue elementum. Maecenas pharetra arcu a elementum malesuada. Sed vehicula est ut neque eleifend, pulvinar laoreet nisi vestibulum. Vivamus interdum ipsum tellus, et convallis sem rutrum eu. Nulla id leo vitae est posuere pharetra et nec nunc. Proin sagittis nec nulla in volutpat. Ut facilisis mi vel leo mattis, a porta sem interdum. Nulla malesuada ornare massa. Proin sapien mauris, lacinia ut porta nec, dignissim eget tortor. In et ornare ligula.]]></description>
+      <pubDate>29-04-2013 14:23:41</pubDate>
+      <author>Dan Donaldson</author>
+    </item>
+    <item>
+      <title>Pellentesque euismod</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=2&news_id=2]]></link>
+      <description><![CDATA[Sed tristique pulvinar lacus, ac lacinia tortor mollis vel. Pellentesque euismod, diam sit amet dapibus euismod, nunc lectus feugiat tellus, nec eleifend augue arcu eget justo. Vivamus lacus ligula, mollis vitae accumsan at, fermentum eu diam. Aliquam et libero enim. Integer sollicitudin non nibh et convallis. Donec tincidunt cursus mi faucibus placerat. Mauris ultricies posuere fringilla. In hac habitasse platea dictumst.]]></description>
+      <pubDate>08-01-2013 12:10:22</pubDate>
+      <author>Benny Boss</author>
+    </item>
+  </channel>
+</rss>

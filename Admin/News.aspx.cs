@@ -214,10 +214,19 @@ public partial class Admin_News : System.Web.UI.Page
             //cmd.Parameters.Add("@news_content", SqlDbType.Text).Value = editor1.Text;
 
             conn.Open();
+
+            #region Unused code
+            ////Not used, but might come in handy. Remeber to add "; SELECT SCOPE_INDENTITY()" in the end of the  SQL string if used.
+            //int NewsId = (int)cmd.ExecuteScalar();
+            #endregion
+
             cmd.ExecuteNonQuery();
             conn.Close();
             Session["Message"] = "Nyheden blev gemt";
+            //Updates RSS feed
+            Feeds.CreateCatXml(Convert.ToInt32(Request.QueryString["category_id"]));
             Response.Redirect("News.aspx?category_id=" + Request.QueryString["category_id"]);
+
         }
         catch (Exception ex)
         {

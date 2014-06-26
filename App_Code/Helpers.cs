@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.ModelBinding;
 using System.Web.Security;
+using System.Xml;
 
 /// <summary>
 /// Samling af små hjælpe funktioner
@@ -53,11 +54,15 @@ public class Helpers
     public static bool EditorForThisCat(object catId)
     {
         bool IsEditor = false;
-        ArrayList ThisEditorCatIdList = (ArrayList)HttpContext.Current.Session["cat_id"];
-
-        if (ThisEditorCatIdList.Contains(catId))
+        ArrayList ThisEditorCatIdList = new ArrayList();
+        if ((ArrayList)HttpContext.Current.Session["cat_id"] != null)
         {
-            IsEditor = true;
+            ThisEditorCatIdList = (ArrayList)HttpContext.Current.Session["cat_id"];
+
+            if (ThisEditorCatIdList.Contains(catId))
+            {
+                IsEditor = true;
+            }
         }
         return IsEditor;
     }
@@ -105,4 +110,5 @@ public class Helpers
     {
         return text.Replace("&lt;", "<").Replace("&gt;", ">").Replace("&amp;", "&");
     }
+
 }

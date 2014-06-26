@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Udland</title>
+    <link>http://localhost:58302/cmk_asp_nyhedssite/Categories.aspx?category_id=4</link>
+    <description>Nyheder fra det store udland</description>
+    <pubDate>Last updated 26-06-2014 04:16:10</pubDate>
+    <item>
+      <title>Dette er en test</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=36]]></link>
+      <description><![CDATA[virker dert?]]></description>
+      <pubDate>09-10-2013 14:35:01</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Etiam et commodo mi</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=35]]></link>
+      <description><![CDATA[Pellentesque eu nulla gravida, lobortis velit ac, rhoncus sapien. Sed vel ligula sem. Morbi sed est et risus gravida ullamcorper. Aliquam scelerisque magna nulla, vitae sodales libero interdum eget. Maecenas sed magna euismod, fringilla risus et, fringilla orci. Integer vel odio augue. Curabitur pretium sapien et egestas elementum. Vivamus tincidunt justo luctus, malesuada odio semper, ultricies lorem. Fusce volutpat dapibus ultrices.]]></description>
+      <pubDate>20-09-2013 12:11:03</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Fusce laoreet egestas</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=25]]></link>
+      <description><![CDATA[Curabitur a libero lorem. Vivamus id tempus sem. Sed eu nulla turpis. Etiam et commodo mi, nec interdum ipsum. Quisque vulputate, lectus quis feugiat vulputate, metus mi venenatis metus, vel semper mauris lorem vitae leo. Fusce laoreet egestas iaculis. Vestibulum ac vehicula ante, et commodo nunc. Nunc porta convallis velit, quis suscipit ante. Phasellus non mi vitae nulla ornare consectetur sed et risus. Integer elementum sed metus ac sodales. Aenean semper, lectus vitae elementum commodo, metus massa sagittis metus, at adipiscing diam erat non nunc. Nulla placerat nibh id eros feugiat feugiat. Phasellus turpis justo, rutrum porttitor diam at, interdum laoreet augue.]]></description>
+      <pubDate>11-08-2013 13:35:25</pubDate>
+      <author>Dan Donaldson</author>
+    </item>
+    <item>
+      <title>Praesent vitae elit</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=24]]></link>
+      <description><![CDATA[Mauris scelerisque leo pretium dolor gravida porttitor. Praesent vitae elit massa. Vestibulum tristique, magna ut ultrices aliquam, quam velit dignissim turpis, eu elementum tellus augue quis nunc. Nulla facilisi. Nam aliquet at purus a commodo. Praesent tristique, nunc vitae malesuada dapibus, lorem dolor fringilla elit, ut facilisis ligula ipsum nec enim. Pellentesque blandit faucibus libero vel mollis. Fusce aliquet tristique sem vitae consequat. Sed eget dignissim tellus, sit amet eleifend nisl. Ut eleifend ut augue et ullamcorper. Nulla ipsum justo, cursus quis interdum vel, viverra in turpis. Praesent at interdum tortor. Etiam et rutrum elit. Praesent ac leo vel nisi scelerisque dictum. Suspendisse auctor pellentesque pulvinar.]]></description>
+      <pubDate>02-08-2013 15:15:36</pubDate>
+      <author>Egon Erikson</author>
+    </item>
+    <item>
+      <title>Suspendisse nibh diam</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=23]]></link>
+      <description><![CDATA[Ut eget tortor vitae ante aliquet imperdiet. Sed sit amet felis sed justo posuere tincidunt. Suspendisse nibh diam, cursus vitae leo ut, porttitor feugiat lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vitae nisi urna. Sed blandit consequat viverra. Sed vel pharetra diam.]]></description>
+      <pubDate>23-07-2013 08:42:48</pubDate>
+      <author>Finn Fransen</author>
+    </item>
+    <item>
+      <title>Aenean ornare ligula porttitor ante sagittis</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=15]]></link>
+      <description><![CDATA[Fusce elementum diam consectetur nulla dictum, non consequat nibh eleifend. Aenean ornare ligula porttitor ante sagittis, sed adipiscing dolor pulvinar. Duis turpis neque, adipiscing vel elit et, pellentesque consectetur elit. Quisque pellentesque scelerisque mi, sed dignissim dolor dictum ac. Sed a risus placerat, semper mi blandit, accumsan nulla. Duis non egestas turpis, ac convallis mauris. Etiam non est at nisl tincidunt accumsan. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer euismod purus non risus sollicitudin, ut feugiat arcu tempus.]]></description>
+      <pubDate>07-05-2013 11:53:46</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Donec quam tortor</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=8]]></link>
+      <description><![CDATA[Suspendisse fermentum dui nec posuere dictum. Donec posuere faucibus placerat. Ut a fermentum lorem, sit amet laoreet metus. Aliquam rutrum urna vitae velit porttitor sodales. Donec quam tortor, mattis ut tortor eu, posuere malesuada erat. Donec in tortor sit amet lacus tempor venenatis. Donec sit amet tortor vitae magna gravida dictum. Sed vitae facilisis nisi, nec egestas ligula. Donec volutpat porta cursus. Nullam porta dignissim cursus. Etiam vel magna elit.]]></description>
+      <pubDate>02-03-2013 10:15:22</pubDate>
+      <author>Dan Donaldson</author>
+    </item>
+    <item>
+      <title>Aliquam scelerisque</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=4&news_id=3]]></link>
+      <description><![CDATA[Pellentesque eu nulla gravida, lobortis velit ac, rhoncus sapien. Sed vel ligula sem. Morbi sed est et risus gravida ullamcorper. Aliquam scelerisque magna nulla, vitae sodales libero interdum eget. M]]></description>
+      <pubDate>23-01-2013 13:48:17</pubDate>
+      <author>Dan Donaldson</author>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Kultur</title>
+    <link>http://localhost:58302/cmk_asp_nyhedssite/Categories.aspx?category_id=12</link>
+    <description>Kultur Det er smart med alt den kultur...</description>
+    <pubDate>Last updated 26-06-2014 04:16:06</pubDate>
+    <item>
+      <title>kultur rettet igen</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=12&news_id=48]]></link>
+      <description><![CDATA[<p>kultur&nbsp;kultur&nbsp;kultur&nbsp;<img alt="smiley" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/regular_smile.png" style="height:23px; width:23px" title="smiley" /><img alt="smiley" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/regular_smile.png" style="height:23px; width:23px" title="smiley" /></p>
+]]></description>
+      <pubDate>25-06-2014 23:54:24</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>halløj kultur</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=12&news_id=47]]></link>
+      <description><![CDATA[<p>hej hej</p>
+]]></description>
+      <pubDate>25-06-2014 23:28:13</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>Kulturel nyhed</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=12&news_id=46]]></link>
+      <description><![CDATA[<p>Dette er en <span class="label label-warning">MEGET </span>kulturel nyhed.</p>
+]]></description>
+      <pubDate>25-06-2014 22:57:47</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>goooooooogle</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=12&news_id=41]]></link>
+      <description><![CDATA[<p>&lt;p&gt;google&lt;/p&gt;</p>
+]]></description>
+      <pubDate>23-06-2014 14:19:46</pubDate>
+      <author>Benny Boss</author>
+    </item>
+  </channel>
+</rss>

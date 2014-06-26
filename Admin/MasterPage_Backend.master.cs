@@ -9,6 +9,14 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
 {
+    protected void Page_Init(object sender, EventArgs e)
+    {
+        if (Session["user_id"] == null)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -58,7 +66,7 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
 
             string active = (Request.RawUrl.Contains("News.aspx") && category_id == reader["category_id"].ToString() ? " class='active'" : "");
 
-            if (Helpers.EditorForThisCat(reader["category_id"]) || (int)Session["role_access"] == 100)
+            if ((int)Session["role_access"] == 100 || Helpers.EditorForThisCat(reader["category_id"]) )
             {
                 MenuItems += String.Format("<li{2}><a href='{0}'>{1}</a></li>", "News.aspx?category_id=" + reader["category_id"], reader["category_title"], active);
 
