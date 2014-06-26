@@ -56,15 +56,11 @@ public class Feeds
         XmlProcessingInstruction Xpi = Dom.CreateProcessingInstruction("xml", "version=\"1.0\" encoding=\"utf-8\"");
         Dom.AppendChild(Xpi);
 
-        //XmlProcessingInstruction Xpi = Dom.CreateProcessingInstruction("xml", "version=\"1.0\" encoding=\"utf-8\"");
-        //Dom.AppendChild(Xpi);
-
         //Create Root element to document and set Root attributes
         XmlElement Rss = Dom.CreateElement("rss");
         Rss.SetAttribute("version", "2.0");
         XmlElement Channel = Dom.CreateElement("channel");
         Rss.AppendChild(Channel);
-
 
         //SQL
         SqlConnection conn = new SqlConnection(Helpers.ConnectionString);
@@ -147,7 +143,6 @@ public class Feeds
         ChannelLink.AppendChild(Dom.CreateTextNode("http://localhost:58302/cmk_asp_nyhedssite/Categories.aspx?category_id=" + HttpContext.Current.Session["ChannelId"].ToString()));
         ChannelDesc.AppendChild(Dom.CreateTextNode(HttpContext.Current.Session["ChannelDesc"].ToString()));
         ChannelPubDate.AppendChild(Dom.CreateTextNode("Last updated " + DateTime.Now.ToString()));
-
 
         conn.Close();
         Dom.AppendChild(Rss);

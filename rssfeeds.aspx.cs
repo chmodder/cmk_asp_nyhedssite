@@ -23,7 +23,6 @@ public partial class rssfeeds : System.Web.UI.Page
             //Get filename excl. extention (no path or directory)
             var fileNameNoExt = Path.GetFileNameWithoutExtension(info.FullName);
 
-
             RssListLtl.Text += "<a href='Assets/Rss/" + fileName + "'><span class='label label-info'>" + fileNameNoExt + "</span></a><br/>";
         }
 
