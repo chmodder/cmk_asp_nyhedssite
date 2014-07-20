@@ -28,15 +28,6 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
         }
     }
 
-
-
-    public bool IsAdmin()
-    {
-        bool isAdmin = (int)Session["role_access"] == 100;
-
-        return isAdmin;
-    }
-
     public string Active(string Target)
     {
         return (Request.RawUrl.Contains(Target + " ") ? "class='active'" : "");
@@ -44,10 +35,7 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
 
     public string MenuItem(string Target, string Text)
     {
-
-
         string active = (Request.RawUrl.Contains(Target) ? " class='active'" : "");
-
         return String.Format("<li{2}><a href='{0}'>{1}</a></li>", Target, Text, active);
 
     }
@@ -78,7 +66,7 @@ public partial class Admin_MasterPage_Backend : System.Web.UI.MasterPage
 
             string active = (Request.RawUrl.Contains("News.aspx") && category_id == reader["category_id"].ToString() ? " class='active'" : "");
 
-            if ((int)Session["role_access"] == 100 || Helpers.EditorForThisCat(reader["category_id"]))
+            if ((int)Session["role_access"] == 100 || Helpers.EditorForThisCat(reader["category_id"]) )
             {
                 MenuItems += String.Format("<li{2}><a href='{0}'>{1}</a></li>", "News.aspx?category_id=" + reader["category_id"], reader["category_title"], active);
 

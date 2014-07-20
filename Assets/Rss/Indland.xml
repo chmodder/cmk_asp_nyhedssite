@@ -4,15 +4,7 @@
     <title>Indland</title>
     <link>http://localhost:58302/cmk_asp_nyhedssite/Categories.aspx?category_id=1</link>
     <description>Dette er indlands nyhederne</description>
-    <pubDate>Last updated 26-06-2014 12:42:20</pubDate>
-    <item>
-      <title>johannes tjekker</title>
-      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=1&news_id=57]]></link>
-      <description><![CDATA[<p>&aelig;kdfughwro&oslash;i&aelig;hg&oslash;lkhwrigt</p>
-]]></description>
-      <pubDate>26-06-2014 12:42:20</pubDate>
-      <author>Carl Carstensen </author>
-    </item>
+    <pubDate>Last updated 26-06-2014 09:01:34</pubDate>
     <item>
       <title>Er caching slået fra nu? åæø</title>
       <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=1&news_id=56]]></link>
@@ -47,6 +39,14 @@
 <p>&aelig;&oslash;&aring;<img alt="yes" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/thumbs_up.png" style="height:23px; width:23px" title="yes" /></p>
 ]]></description>
       <pubDate>26-06-2014 02:12:33</pubDate>
+      <author>Benny Boss</author>
+    </item>
+    <item>
+      <title>bhjl</title>
+      <link><![CDATA[http://localhost:58302/cmk_asp_nyhedssite/News.aspx?category_id=1&news_id=44]]></link>
+      <description><![CDATA[<p><span class="label label-warning">&nbsp; bj&aelig; b&aelig;j&nbsp;</span></p>
+]]></description>
+      <pubDate>23-06-2014 14:46:10</pubDate>
       <author>Benny Boss</author>
     </item>
   </channel>
