@@ -34,7 +34,7 @@
                         <% Response.Write(MenuItem("Default.aspx", "Admin")); %>
                         <% Response.Write(MenuItem("Users.aspx", "Brugere")); %>
                         <% Response.Write(MenuItem("Categories.aspx", "Kategorier")); %>
-                        <% Response.Write(IsAdmin()? MenuItem("Editors.aspx", "Redaktører") :""); %>
+                        <% Response.Write(MenuItem("Editors.aspx", "Redaktører")); %>
                         <% Response.Write(MenuItem("../Login.aspx?action=logout", "Log af <i class=\"icon-unlock\"></i>", "return confirm(\'Er du sikker på du vil logge af?\')")); %>
                         <% Response.Write(MenuItem("../Default.aspx", "Vis Frontend <i class=\"icon-share-alt\"></i>")); %>
                     </ul>
