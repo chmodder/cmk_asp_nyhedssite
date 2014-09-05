@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <CatId><![CDATA[2]]></CatId>
+    <ChannelName><![CDATA[Sport]]></ChannelName>
+    <ChannelDescription><![CDATA[Her kommer alle sports nyhederne]]></ChannelDescription>
+    <item>
+      <ItemId><![CDATA[54]]></ItemId>
+    </item>
+    <item>
+      <ItemTitle><![CDATA[Prøver lige igen - sport]]></ItemTitle>
+    </item>
+    <item>
+      <ItemContent><![CDATA[<p>S&aring; pr&oslash;ver jeg lige igen&nbsp;&reg;<img alt="angry" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/angry_smile.png" style="height:23px; width:23px" title="angry" /></p>
+
+<hr />
+<p>&nbsp;</p>
+]]></ItemContent>
+    </item>
+    <item>
+      <PubDate><![CDATA[26-06-2014 02:52:27]]></PubDate>
+    </item>
+    <item>
+      <Author><![CDATA[Benny Boss]]></Author>
+    </item>
+    <item>
+      <ItemId><![CDATA[53]]></ItemId>
+    </item>
+    <item>
+      <ItemTitle><![CDATA[Ny sportsnyhed - æøå]]></ItemTitle>
+    </item>
+    <item>
+      <ItemContent><![CDATA[<p>&aelig;&aring;&oslash;&nbsp;<img alt="yes" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/thumbs_up.png" style="height:23px; width:23px" title="yes" /></p>
+]]></ItemContent>
+    </item>
+    <item>
+      <PubDate><![CDATA[26-06-2014 02:41:04]]></PubDate>
+    </item>
+    <item>
+      <Author><![CDATA[Benny Boss]]></Author>
+    </item>
+    <item>
+      <ItemId><![CDATA[52]]></ItemId>
+    </item>
+    <item>
+      <ItemTitle><![CDATA[Sportsnyhed---øåæ]]></ItemTitle>
+    </item>
+    <item>
+      <ItemContent><![CDATA[<p>&oslash;&aring;&aelig;&nbsp;<img alt="mail" src="http://localhost:58302/cmk_asp_nyhedssite/Assets/ckeditor/plugins/smiley/images/envelope.png" style="height:23px; width:23px" title="mail" /></p>
+]]></ItemContent>
+    </item>
+    <item>
+      <PubDate><![CDATA[26-06-2014 02:38:56]]></PubDate>
+    </item>
+    <item>
+      <Author><![CDATA[Benny Boss]]></Author>
+    </item>
+    <item>
+      <ItemId><![CDATA[22]]></ItemId>
+    </item>
+    <item>
+      <ItemTitle><![CDATA[Nam elit dui]]></ItemTitle>
+    </item>
+    <item>
+      <ItemContent><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam elit dui, laoreet quis blandit id, interdum nec diam. Aliquam commodo vehicula ultrices. Quisque ac turpis erat. Nullam iaculis, elit elementum ornare hendrerit, ipsum risus lobortis dui, ut pharetra ipsum lacus a libero. Quisque vehicula lectus lorem, at consectetur neque semper nec. Maecenas aliquet adipiscing velit eu ullamcorper. Fusce facilisis risus ac turpis dictum, vel aliquam risus porttitor. Pellentesque libero arcu, posuere quis condimentum ac, blandit vel tortor. Nulla facilisi. Nullam tincidunt neque magna, at malesuada erat rhoncus at.]]></ItemContent>
+    </item>
+    <item>
+      <PubDate><![CDATA[16-07-2013 10:50:15]]></PubDate>
+    </item>
+    <item>
+      <Author><![CDATA[Dan Donaldson]]></Author>
+    </item>
+    <item>
+      <ItemId><![CDATA[20]]></ItemId>
+    </item>
+    <item>
+      <ItemTitle><![CDATA[Aenean aliquam tincidunt]]></ItemTitle>
+    </item>
+    <item>
+      <ItemContent><![CDATA[Etiam egestas risus eleifend sodales iaculis. Aenean sollicitudin nunc eget urna molestie euismod. Aenean aliquam tincidunt tempor. Vivamus imperdiet feugiat nisi, a posuere eros viverra eget. Ut sodales, velit lacinia varius cursus, arcu enim ullamcorper est, nec ultrices orci dolor at neque. Nullam tempus ullamcorper eleifend. Suspendisse tincidunt vestibulum urna, adipiscing commodo arcu auctor at. Cras euismod rhoncus lorem ac euismod.]]></ItemContent>
+    </item>
+    <item>
+      <PubDate><![CDATA[22-06-2013 08:35:45]]></PubDate>
+    </item>
+    <item>
+      <Author><![CDATA[Benny Boss]]></Author>
+    </item>
+  </channel>
+</rss>

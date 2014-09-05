@@ -39,11 +39,12 @@ public class FeedsRefactored
 
     #region Properties
 
-    public static List<RssNamespace.KeyValuePair> ChannelData { get; set; }
+    public static List<RssNamespace.KeyValuePair> ChannelData = new List<KeyValuePair>();
 
-    public static List<RssNamespace.KeyValuePair> ItemData { get; set; }
+    public static List<RssNamespace.KeyValuePair> ItemData = new List<KeyValuePair>();
 
-    public static List<RssItem> Items { get; set; }
+    public static ArrayList Items = new ArrayList();
+    //public static List<RssItem> Items { get; set; }
 
     #region UnusedForNow
 
@@ -69,10 +70,12 @@ public class FeedsRefactored
     /// <param name="catId"></param>
     /// <param name="channelSql">Database output MUST ONLY contain valid RSS elementnames</param>
     /// <param name="itemSql">Database output MUST ONLY contain valid RSS elementnames</param>
-    public static void CreateRssFeed(string channelSql, string itemSql)
+    public static void CreateRssFeed(string channelSql, string itemSql, string fileName = null)
     {
         //path/filename needs fixing...
-        string PathAndFileName = HttpContext.Current.Server.MapPath("~/Assets/Rss/") + (string)HttpContext.Current.Session["CatTitle"] + ".xml";
+        //string PathAndFileName = HttpContext.Current.Server.MapPath("~/Rss/") + (string)HttpContext.Current.Session["CatTitle"] + ".xml";
+        string PathAndFileName = HttpContext.Current.Server.MapPath("~/Assets/Rss/") + "test.xml";
+
 
         //Create document
         XmlDocument Dom = new XmlDocument();
@@ -92,24 +95,33 @@ public class FeedsRefactored
         GetItemsData(itemSql);
 
         //Add channelData
-        foreach (var Item in ChannelData)
+        foreach (KeyValuePair Item in ChannelData)
         {
             XmlElement Temp = Dom.CreateElement(Item.Key);
             Temp.AppendChild(Dom.CreateCDataSection(Item.Value));
             Channel.AppendChild(Temp);
         }
-
+        #region original
         //Add Items/itemdata
-        foreach (var Item in Items)
+        //foreach (List<RssNamespace.KeyValuePair> Item in Items)
+        //{
+        //    XmlElement ChannelItem = Dom.CreateElement("item");
+        //    Channel.AppendChild(ChannelItem);
+        //    foreach (RssNamespace.KeyValuePair item in ItemData)
+        //    {
+        //        XmlElement Temp = Dom.CreateElement(item.Key);
+        //        Temp.AppendChild(Dom.CreateCDataSection(item.Value));
+        //        ChannelItem.AppendChild(Temp);
+        //    }
+        //}
+        #endregion
+        foreach (var x in ItemData.ToList())
         {
             XmlElement ChannelItem = Dom.CreateElement("item");
             Channel.AppendChild(ChannelItem);
-            foreach (var item in ItemData)
-            {
-                XmlElement Temp = Dom.CreateElement(item.Key);
-                Temp.AppendChild(Dom.CreateCDataSection(item.Value));
-                ChannelItem.AppendChild(Temp);
-            }
+            XmlElement Temp = Dom.CreateElement(x.Key);
+            Temp.AppendChild(Dom.CreateCDataSection(x.Value));
+            ChannelItem.AppendChild(Temp);
         }
         Dom.AppendChild(Rss);
         Dom.Save(PathAndFileName);
@@ -139,7 +151,7 @@ public class FeedsRefactored
         //Convert sqlData to ChannelData (property) with correct Rss-compatiple naming for each element in ArrayList
 
         //loop through every RssItem in the DataTable (Dt)
-
+        ChannelData.Clear();
         foreach (DataRow row in Dt.Rows)
         {
             //Create Item (in a list<ItemData>)
@@ -147,7 +159,7 @@ public class FeedsRefactored
             {
                 //create temporary KeyValuePair to hold data from each RowField/ColumnName
 
-                KeyValuePair TempPair = new KeyValuePair();
+                RssNamespace.KeyValuePair TempPair = new KeyValuePair();
                 TempPair.Key = column.ColumnName;
                 TempPair.Value = row[column].ToString();
                 ChannelData.Add(TempPair);
@@ -190,7 +202,8 @@ public class FeedsRefactored
 
         //add sqlData to ItemData (property) with correct Rss-compatiple naming for each element in ArrayList
         //loops through every RssItem in the DataTable (Dt)
-
+        ItemData.Clear();
+        Items.Clear();
         foreach (DataRow row in Dt.Rows)
         {
             //Create Item (in a list<ItemData>)
@@ -200,6 +213,10 @@ public class FeedsRefactored
                 KeyValuePair TempPair = new KeyValuePair();
                 TempPair.Key = Column.ColumnName;
                 TempPair.Value = row[Column].ToString();
+
+                //???        
+                //While: column-name or itemid is unique: ItemData.Add(Temppair)
+                //???
 
                 //Add KeyValuePair to ItemData (List<KeyValuePair>)
                 ItemData.Add(TempPair);
@@ -211,9 +228,11 @@ public class FeedsRefactored
             //It actually adds a List<KeyValuePair> to a new list List to create a list of lists.
             Items.Add(ItemData);
 
+            #region unused
             //public static List<RssNamespace.KeyValuePair> ChannelData { get; set; }
             //public static List<RssNamespace.KeyValuePair> ItemData { get; set; }
             //public static List<RssItem> Items { get; set; }
+            #endregion
 
             //Now we have the complete List of RssItems (converted from the DataTable) in the "Items" Property,
             //and we are ready to add the RssItems to the Xml-Document.
